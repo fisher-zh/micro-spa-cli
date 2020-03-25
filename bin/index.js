@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const init = require('./init');
 const askQuestions = require('./ask-questions');
 const createFolder = require('./create-folder');
@@ -27,7 +29,12 @@ const run = async () => {
     // create the folder
     const folderPath = createFolder(userAnswers.name);
     // download template
-    downloadFile('fisher-zh/micro-spa-main', folderPath);
+    const type = userAnswers.type.split('-')[0];
+    const gitPath = 'fisher-zh/micro-spa-' + type;
+    const localPath = folderPath + '/' + type;
+    console.log('downloading...');
+    await downloadFile(gitPath, localPath);
+    console.log('end');
     // show success message
 
 };

@@ -2,9 +2,9 @@
   "name": "micro-spa-cli",
   "version": "1.0.0",
   "description": "单页面应用微服务结构初始化工具",
-  "main": "bin/init.js",
+  "main": "bin/index.js",
   "bin": {
-    "micro-spa-cli": "bin/init.js"
+    "micro-spa-cli": "bin/index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
