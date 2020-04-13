@@ -4,6 +4,13 @@ const init = require('./init');
 const askQuestions = require('./ask-questions');
 const createFolder = require('./create-folder');
 const downloadFile = require('./download-file');
+const { program } = require('commander');
+
+program
+    .usage(require('../package.json').name)
+    .description(require('../package.json').description)
+    .version(require('../package.json').version, '-v, --vers', 'output the current version')
+    .parse(process.argv);
 
 const run = async () => {
     // show script introduction
@@ -34,8 +41,8 @@ const run = async () => {
     const localPath = folderPath + '/' + type;
     console.log('downloading...');
     await downloadFile(gitPath, localPath);
-    console.log('end');
     // show success message
+    console.log('Project initialization is complete.')
 
 };
 
