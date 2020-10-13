@@ -1,6 +1,6 @@
 {
   "name": "micro-spa-cli",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "micro-spa-cli(单页面应用微服务结构初始化工具)",
   "main": "bin/index.js",
   "bin": {
